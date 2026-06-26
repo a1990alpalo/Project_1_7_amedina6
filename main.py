@@ -5,7 +5,7 @@ Purpose: This program helps users track job applications from the terminal.
 It allows users to view applications, add new applications, update status, seach by company, 
 and count applications by status"""
 
-from applications import view_applications
+from applications import view_applications, add_applications
 
 def show_menu():
     """Displays the main menu options for the user"""
@@ -46,7 +46,7 @@ def main():
         if choice == "1":
             view_applications(applications)
         elif choice =="2":
-            print("Add new application selected.")
+            add_applications(applications)
         elif choice == "3":
             print("Update application status selected.")
         elif choice == "4":
