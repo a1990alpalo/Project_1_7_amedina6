@@ -5,12 +5,13 @@ Purpose: This program helps users track job applications from the terminal.
 It allows users to view applications, add new applications, update status, seach by company, 
 and count applications by status"""
 
+from applications import view_applications
 
 def show_menu():
     """Displays the main menu options for the user"""
     print("\nJob Application Tracker")
     print("1. View all applications")
-    print("2. Adda new application")
+    print("2. Add a new application")
     print("3. Update application status")
     print("4. Search by company")
     print("5. Count applications by status")
@@ -19,6 +20,23 @@ def show_menu():
 
 def main(): 
     """runs the main program loop"""
+    applications = [
+        {
+            "company": "OCLC",
+            "title": "Data Analytics Intern",
+            "date_applied": "2026-06-25",
+            "status": "Applied",
+            "notes": "Submitted application through company website."
+        },
+        {
+            "company": "Cardinal Health",
+            "title": "Junior Data Analyst",
+            "date_applied": "2026-06-26",
+            "status": "Wishlist",
+            "notes": "Need to review job description before applying."
+        }
+    ]
+    
     running = True
 
     while running: 
@@ -26,7 +44,7 @@ def main():
         choice = input("Chose an option: ")
 
         if choice == "1":
-            print("View all applications selected.")
+            view_applications(applications)
         elif choice =="2":
             print("Add new application selected.")
         elif choice == "3":
