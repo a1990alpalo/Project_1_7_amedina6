@@ -44,3 +44,26 @@ def add_applications(applications):
 
     applications.append(new_application)
     print(f"\nApplication for {title} at {company} has beed added to the list")
+
+
+def update_application_status(applications):
+    """Updates the status of a job applications for a company"""
+    if not applications:
+        print("\nNo job applications are available to update.")
+        return
+    
+    company_search = input("\nEnter the company name to update")
+    applications_found = False
+
+    for application in applications:
+        if application["company"] == company_search:
+            print(f"\nCurrent status for {application["company"]}: {application["status"]}")
+            new_status = input("Enter the new status: ")
+
+            application["status"] = new_status
+            applications_found = True
+
+            print(f"\nStatus updated to: {new_status}")
+
+    if not applications_found:
+        print("\nNo application found for that company.")
