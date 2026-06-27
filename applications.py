@@ -67,3 +67,22 @@ def update_application_status(applications):
 
     if not applications_found:
         print("\nNo application found for that company.")
+
+def search_by_company(applications):
+    """Sarch for applications by company name"""
+    company_name = input("Enter the company name to search: ")
+
+    found = False
+
+    for application in applications:
+        if company_name in application["company"].lower():
+            print("\nApplication Found:")
+            print(f"Company: {application['company']}")
+            print(f"Title: {application['title']}")
+            print(f"Date applied:{application['date_applied']}")
+            print(f"Status: {application['status']}")
+            print(f"Notes: {applications['notes']}")
+            found = True
+
+    if not found:
+        print("No application found for that company.")
