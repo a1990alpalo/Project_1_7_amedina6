@@ -86,3 +86,20 @@ def search_by_company(applications):
 
     if not found:
         print("No application found for that company.")
+
+def count_applications_by_status(applications):
+    """Count and display the applications by status!"""
+    status_count = {}
+
+    for application in applications:
+        status = application['status']
+
+        if status in status_count:
+            status_count[status] += 1
+        else: 
+            status_count[status] = 1
+
+    print("\nApplication Count by status: ")
+
+    for status, count in status_count.items():
+        print(f"{status}: {count}")
