@@ -43,7 +43,7 @@ def add_applications(applications):
     }
 
     applications.append(new_application)
-    print(f"\nApplication for {title} at {company} has beed added to the list")
+    print(f"\nApplication for {title} at {company} has been added to the list")
 
 
 def update_application_status(applications):
@@ -57,7 +57,7 @@ def update_application_status(applications):
 
     for application in applications:
         if application["company"] == company_search:
-            print(f"\nCurrent status for {application["company"]}: {application["status"]}")
+            print(f"\nCurrent status for {application['company']}: {application['status']}")
             new_status = input("Enter the new status: ")
 
             application["status"] = new_status
@@ -75,13 +75,13 @@ def search_by_company(applications):
     found = False
 
     for application in applications:
-        if company_name in application["company"].lower():
+        if company_name in application["company"]:
             print("\nApplication Found:")
             print(f"Company: {application['company']}")
             print(f"Title: {application['title']}")
             print(f"Date applied:{application['date_applied']}")
             print(f"Status: {application['status']}")
-            print(f"Notes: {applications['notes']}")
+            print(f"Notes: {application['notes']}")
             found = True
 
     if not found:
