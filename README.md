@@ -66,3 +66,5 @@ Job Application Tracker
 ## Author
 
 Alberto Medina
+Youtube Presentation link: 
+Slide Deck: [Project 1 Slide Deck](Job_Application_Tracker_Project1_Slides_Requirement_Aligned.pptx)
