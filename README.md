@@ -67,4 +67,4 @@ Job Application Tracker
 
 Alberto Medina
 Youtube Presentation link: https://youtu.be/c4UbIXhTBAI
-Slide Deck: [Project 1 Slide Deck](Job_Application_Tracker_Project1_Slides_Requirement_Aligned.pptx)
+Slide Deck: [Project 1 Slide Deck](Job_Application_Tracker_Project1_Slides_Requirement_Aligned.pptx)us
